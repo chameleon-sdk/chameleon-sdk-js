@@ -29,6 +29,18 @@ document.querySelector("#connect-amazon").addEventListener("click", async () => 
 
 `connect()` chama o SDK Gateway do Chameleon e redireciona para o Hosted Connect. A chave publicável identifica o environment; a sessão Chameleon e as permissões de workspace são verificadas no servidor antes de uma tentativa ser criada.
 
+## Marketplaces
+
+| Marketplace | Provider ID | Status | Capacidades atuais |
+| --- | --- | --- | --- |
+| Amazon SP-API US | `amazon` | Disponível | Connect, Hosted Connect, descoberta de marketplaces, seleção opcional, reconnect e disconnect |
+| eBay | `ebay` | Em planejamento | Adapter ainda não habilitado |
+| TikTok Shop | `tiktok_shop` | Em planejamento | Adapter ainda não habilitado |
+| Temu | `temu` | Em planejamento | Adapter ainda não habilitado |
+| Walmart Marketplace | `walmart` | Em planejamento | Adapter ainda não habilitado |
+
+Nesta versão, `connect()` aceita somente `provider: "amazon"`. Os demais IDs estão reservados no Chameleon, mas usá-los antes de seus adapters serem habilitados retorna erro de provider indisponível.
+
 ## Operações de interface
 
 ```js

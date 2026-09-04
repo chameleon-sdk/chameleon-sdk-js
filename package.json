@@ -1,0 +1,34 @@
+{
+  "name": "@chameleon/sdk",
+  "version": "0.1.0",
+  "description": "Private JavaScript SDK for Chameleon marketplace connections.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/index.js && node --check src/client.js && node --check src/errors.js"
+  },
+  "keywords": [
+    "chameleon",
+    "marketplace",
+    "amazon",
+    "sdk"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}
